@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrafficRulesTrainer", "TrafficRulesTrainer\TrafficRulesTrainer.csproj", "{EDD1FEE4-BBAD-4EF1-9581-137181DD2CA4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8584680A-CB16-4D88-8E0D-5C684077505C} = {8584680A-CB16-4D88-8E0D-5C684077505C}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicePart", "ServicePart\ServicePart.csproj", "{8584680A-CB16-4D88-8E0D-5C684077505C}"
 EndProject

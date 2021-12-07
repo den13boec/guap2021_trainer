@@ -103,8 +103,14 @@ namespace TrafficRulesTrainer
                 string.IsNullOrWhiteSpace(QuestionTextBox.Text) ? null : QuestionTextBox.Text,
                 variants,
                 RightAnswerVariant,
-                string.IsNullOrWhiteSpace(AnswerExplanationBox.Text) ? null : AnswerExplanationBox.Text
+                string.IsNullOrWhiteSpace(AnswerExplanationBox.Text) ? null : AnswerExplanationBox.Text,
+                0
                 );
+
+            using (var client = new ServiceReference1.Service1Client())
+            {
+                var ret = client.GetDataUsingDataContract(new ServiceReference1.CompositeType { BoolValue = true, StringValue = "aaaa" });
+            }
 
 
         }
