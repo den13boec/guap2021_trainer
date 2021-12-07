@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <StackPanel>
+        <StackPanel Margin="10">
             <Image x:Name="QuestionImage"/>
             <Label x:Name="QuestionLabel" Margin="8"/>
             <ListBox x:Name="AnswerVariants"/>
