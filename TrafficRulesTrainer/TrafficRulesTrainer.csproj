@@ -75,7 +75,6 @@
     <Compile Include="QuestionControl.xaml.cs">
       <DependentUpon>QuestionControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="QuestionForm.cs" />
     <Compile Include="UserData.cs" />
     <Compile Include="UserPageControl.xaml.cs">
       <DependentUpon>UserPageControl.xaml</DependentUpon>

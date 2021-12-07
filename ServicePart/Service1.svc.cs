@@ -29,5 +29,11 @@ namespace ServicePart
             }
             return composite;
         }
+
+        public bool CreateQuestion(QuestionForm questionForm) {
+
+
+            return true;
+		}
     }
 }

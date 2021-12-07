@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using System.Windows.Media;
 
 namespace ServicePart
 {
@@ -19,7 +20,30 @@ namespace ServicePart
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
+        [OperationContract]
+        bool CreateQuestion(QuestionForm questionForm);
+
         // TODO: Добавьте здесь операции служб
+    }
+
+    [DataContract]
+    public class QuestionForm {
+        public ImageSource Image;
+        public string QuestionText;
+        public List<string> AnswerVariants;
+        public int RightAnswerId;
+        public string AnswerExplanation;
+        public int SelectedVariant;
+
+        public QuestionForm(ImageSource image, string questionText, List<string> answerVariants, int rightAnswerId, string answerExplanation, int selectedVariant) {
+            Image = image;
+            QuestionText = questionText;
+            AnswerVariants = answerVariants;
+            RightAnswerId = rightAnswerId;
+            AnswerExplanation = answerExplanation;
+
+            SelectedVariant = selectedVariant;
+        }
     }
 
 

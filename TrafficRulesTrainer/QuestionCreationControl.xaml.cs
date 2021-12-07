@@ -98,24 +98,41 @@ namespace TrafficRulesTrainer
                 variants.Add(variant);
             }
 
-            QuestionForm form = new QuestionForm(
-                QuestionImageViewer.Source,
-                string.IsNullOrWhiteSpace(QuestionTextBox.Text) ? null : QuestionTextBox.Text,
-                variants,
-                RightAnswerVariant,
-                string.IsNullOrWhiteSpace(AnswerExplanationBox.Text) ? null : AnswerExplanationBox.Text,
-                0
-                );
+    //        using (var client = new ServiceReference1.Service1Client()) {
+    //            bool res = client.CreateQuestion(new ServiceReference1.QuestionForm(
+    //                QuestionImageViewer.Source,
+    //                string.IsNullOrWhiteSpace(QuestionTextBox.Text) ? null : QuestionTextBox.Text,
+    //                variants,
+    //                RightAnswerVariant,
+    //                string.IsNullOrWhiteSpace(AnswerExplanationBox.Text) ? null : AnswerExplanationBox.Text,
+    //                0
+    //            ));
 
-            using (var client = new ServiceReference1.Service1Client())
-            {
-                var ret = client.GetDataUsingDataContract(new ServiceReference1.CompositeType { BoolValue = true, StringValue = "aaaa" });
-            }
+    //            if (res) {
+    //                Clear();
+				//} else {
+    //                MessageBox.Show("Не удалось создать вопрос");
+				//}
+    //        }
 
 
-        }
+			//QuestionForm form = new QuestionForm(
+			//	QuestionImageViewer.Source,
+			//	string.IsNullOrWhiteSpace(QuestionTextBox.Text) ? null : QuestionTextBox.Text,
+			//	variants,
+			//	RightAnswerVariant,
+			//	string.IsNullOrWhiteSpace(AnswerExplanationBox.Text) ? null : AnswerExplanationBox.Text,
+			//	0
+			//	);
 
-        public void Clear()
+
+			using (var client = new ServiceReference1.Service1Client()) {
+				var ret = client.GetDataUsingDataContract(new ServiceReference1.CompositeType { BoolValue = true, StringValue = "aaaa" });
+			}
+
+		}
+
+		public void Clear()
         {
             AnswerVariantsList.Items.Clear();
             QuestionImageViewer.Source = null;

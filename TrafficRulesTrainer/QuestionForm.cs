@@ -7,7 +7,7 @@ using System.Windows.Media;
 
 namespace TrafficRulesTrainer
 {
-    public class QuestionForm
+    class QuestionForm
     {
         public ImageSource Image;
         public string QuestionText;
